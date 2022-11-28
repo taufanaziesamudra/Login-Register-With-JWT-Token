@@ -1,0 +1,32 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJUYXVmYW4gQWppZSIsImVtYWlsIjoidGF1ZmFuQGdtYWlsLmNvbSIsImlhdCI6MTY2NTA2OTA0OCwiZXhwIjoxNjY1MDY5MDY4fQ.xnlmk_v8i-fJJhWJDAlxjZgi95yLzRJvwAbotRMg_cM
+
+// Register
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+      "name": "Bangkid",
+      "email": "taufan@gmail.com",
+      "password": "123456",
+      "confPassword": "123456"
+}
+
+// Login
+###
+POST http://localhost:5000/login
+Content-Type: application/json 
+
+{
+      "email": "taufan@gmail.com",
+      "password": "123456"
+}
+
+// Untuk mendapatkan refres token
+###
+GET http://localhost:5000/token
+
+// Logout
+###
+DELETE http://localhost:5000/logout
